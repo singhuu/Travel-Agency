@@ -1,0 +1,653 @@
+import java.util.*;
+public class travel
+{
+    public static void main(String[] args) 
+    {
+        Scanner kb=new Scanner(System.in);
+
+        // initialise total to start from zero
+        double total=0;
+        double eca;
+        //double contact;
+        int n;
+        int km;
+        int car;
+        int age;
+        double agent;
+        double fin;//:)
+
+        // variable to allow user to select choice from the menu;
+        char choice;
+        char c1;
+        char ec;
+        String name;
+        String con;
+
+        // loop from here so that this is printed on the screen continuously till quite
+        do
+        {
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("|    *******     *******        ****       *         *     *******    *         |");
+            System.out.println("|       *        *     *       *    *      *         *     *          *         |");
+            System.out.println("|       *        *******      * **** *      *       *      *******    *         |");
+            System.out.println("|       *        * *          *      *        *   *        *          *         |");    
+            System.out.println("|       *        *   *        *      *          *          *******    *******   |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("|               WELCOME TO SHANTANU TOURS AND TRAVELS!                          |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("| `                     WHAT ARE YOU LOOKING FOR??                              |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("|       AIRPLANE TICKETS?                    PRESS ==> 'A' to continue          |");
+            System.out.println("|       BUS      TICKETS?                    PRESS ==> 'B' to continue          |");
+            System.out.println("|       CAR      TICKETS?                    PRESS ==> 'C' to continue          |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println("|       PRESS THE REQUIRED OPTION TO CONTINUE OR 'E' TO EXIT                    |");
+            System.out.println("|-------------------------------------------------------------------------------|");
+            System.out.println();
+            System.out.println("Enter choice");
+
+            // user choice here
+            choice=kb.next().charAt(0);
+
+            // switch statement to allow user to select type of meal
+            switch(choice)
+            {
+                case 'A':   
+                do{
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                       YOU HAVE CHOSEN ==>AIRPLANE                             |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                      ECONOMY OR BUSINESS CLASS??                              |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|        Economy  CLASS?                   PRESS ==> 'E' to CONTINUE            |");
+                    System.out.println("|        Business CLASS?                   PRESS ==> 'B' to CONTINUE            |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println();
+
+                    System.out.println("Enter choice");
+
+                    // user choice here
+                    choice=kb.next().charAt(0);
+
+                    switch(choice)
+                    {
+                        case 'E' : System.out.println("Economy Class");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                       AIRPLANE ==> ECONOMY CLASS.                             |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                   Select Location From choices Below                          |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|     MUMBAI TO DELHI?     All Inclusive Rs. 8000     PRESS ==> M TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Kolkata?   All Inclusive Rs. 6000     PRESS ==> K TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Chennai?   All Inclusive Rs. 8500     PRESS ==> C TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Bangalore? All Inclusive Rs. 6500     PRESS ==> B TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Hyderabad? All Inclusive Rs. 5500     PRESS ==> H TO CONTINUE   |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println();
+                        System.out.println();
+
+                        ec = kb.next().charAt(0);
+                        switch(ec)
+
+                        {
+                            case 'D' : System.out.println("Mumbai to Delhi selected");
+                            eca = 8000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'K' : System.out.println("Mumbai to Kolkata selected");
+                            eca = 6000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total); 
+                            break;
+
+                            case 'C' : System.out.println("Mumbai to Chennai Selected");
+                            eca = 8500;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'B' : System.out.println("Mumbai to Bangalore Selected");
+                            eca = 6500;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'H' : System.out.println("Mumbai to Hyderabad Selected");
+                            eca = 5500;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            // return program to 1st screen
+                            case 'R' : System.out.println("Return Selected");
+                            break;
+
+                            // invalid entry or caps lock is off
+                            default:System.out.println("Invalid selection or check caps lock is on");
+                        }   
+                        break;
+                        case 'B' : System.out.println("Business Class");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                       AIRPLANE ==> BUSINESS CLASS.                            |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                   Select Location From choices Below                          |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|     MUMBAI TO DELHI?     All Inclusive Rs. 23000    PRESS ==> D TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Kolkata?   All Inclusive Rs. 26000    PRESS ==> K TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Chennai?   All Inclusive Rs. 13000    PRESS ==> C TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Bangalore? All Inclusive Rs. 10000    PRESS ==> B TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Hyderabad? All Inclusive Rs. 14000    PRESS ==> H TO CONTINUE   |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+
+                        ec = kb.next().charAt(0);
+                        switch(ec)
+
+                        {
+                            case 'D' : System.out.println("Mumbai to Delhi selected");
+                            eca = 23000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'C' : System.out.println("Mumbai to Chennai Selected");
+                            eca = 13000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'K' : System.out.println("Mumbai to Kolkata selected");
+                            eca = 26000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total); 
+                            break;
+
+                            case 'B' : System.out.println("Mumbai to Bangalore Selected");
+                            eca = 10000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            case 'H' : System.out.println("Mumbai to Hyderabad Selected");
+                            eca = 14000;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println("No. of Tickets   :   " +n);
+                            System.out.println("Current total Rs.    " +total);
+
+                            break;
+                            // return program to 1st screen
+                            case 'R' : System.out.println("Return Selected");
+                            break;
+
+                            // invalid entry or caps lock is off
+                            default:System.out.println("Invalid selection or Check caps lock is on");
+                        } 
+                        break;
+                    }
+                }while(choice!='R');
+
+                // breaking here because we just dealt with our 1st case
+                break;
+
+                // second case here which is the mains
+                case 'B':   
+                do{
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                       YOU HAVE CHOSEN ==> BUS                                 |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                      AC BUSES OR NON/AC BUSES?                                |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|         AIR-CONDITIONED     BUSES?                PRESS ==> 'A' TO CONTINUE   |");
+                    System.out.println("|         NON AIR-CONDITIONED BUSES                 PRESS ==> 'N' TO CONTINUE   |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+
+                    System.out.println();
+                    System.out.println("Enter choice");
+
+                    // user choice here
+                    choice=kb.next().charAt(0);
+
+                    switch(choice)
+                    {
+                        case 'A' : System.out.println("A/C Bus Selected");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                       BUS ==> A/C BUS           .                             |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                   Select Location From choices Below                          |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|     Mumbai to Goa?       All Inclusive Rs. 1410     PRESS ==> G TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Shirdi?    All Inclusive Rs.  755     PRESS ==> S TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Lonavala?  All Inclusive Rs.  500     PRESS ==> L TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Ahmedabad? All Inclusive Rs. 1800     PRESS ==> A TO CONTINUE   |");
+
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+
+                        ec = kb.next().charAt(0);
+                        switch(ec)
+
+                        {
+                            case 'G' : System.out.println("Mumbai to Goa selected");
+                            eca = 1410;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'S' : System.out.println("Mumbai to Shirdi Selected");
+                            eca = 755;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'L' : System.out.println("Mumbai to Lonavala Selected");
+                            eca = 500;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'H' : System.out.println("Mumbai to Ahmedabad Selected");
+                            eca = 1800;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            // return program to 1st screen
+                            case 'R' : System.out.println("Return Selected");
+                            break;
+
+                            // invalid entry or caps lock is off
+                            default:System.out.println("Invalid selection or check caps lock is on");
+                        }   
+                        break;
+                        case 'N':
+                        System.out.println("A/C Bus Selected");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                       BUS ==> NON A/C BUS       .                             |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|                   Select Location From choices Below                          |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|     Mumbai to Goa?       All Inclusive Rs.  450     PRESS ==> G TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Shirdi?    All Inclusive Rs.  350     PRESS ==> S TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Lonavala?  All Inclusive Rs.  250     PRESS ==> L TO CONTINUE   |");
+                        System.out.println("|     Mumbai to Ahmedabad? All Inclusive Rs. 1200     PRESS ==> A TO CONTINUE   |");
+
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+                        System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                        System.out.println("|-------------------------------------------------------------------------------|");
+
+                        ec = kb.next().charAt(0);
+                        switch(ec)
+
+                        {
+                            case 'G' : System.out.println("Mumbai to Goa selected");
+                            eca = 450;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'S' : System.out.println("Mumbai to Shirdi Selected");
+                            eca = 350;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'L' : System.out.println("Mumbai to Lonavala Selected");
+                            eca = 250;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            case 'H' : System.out.println("Mumbai to Ahmedabad Selected");
+                            eca = 1200;
+                            System.out.println("Enter No. Of Tickets: ");
+                            n = kb.nextInt();
+                            total=total+(eca*n);
+                            System.out.println("   YOUR CURRENT SUMMARY  ");
+                            System.out.println(" No. of Tickets   :   " +n);
+                            System.out.println(" Current total Rs.    " +total);
+
+                            break;
+                            // return program to 1st screen
+                            case 'R' : System.out.println("Return Selected");
+                            break;
+
+                            // invalid entry or caps lock is off
+                            default:System.out.println("Invalid selection or check caps lock is on");
+                        }  
+                        break;
+                    }
+                }while(choice!='R');
+
+                // breaking here because we just dealt with our 1st case
+                break;
+
+                case 'C' :
+                do{
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                       YOU HAVE CHOSEN ==> CAR                                 |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|                   Select Available Cars from the choices                      |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|     HATCHBACK?     RATE IS All Inclusive Rs. 10/KM  PRESS ==> 'D' TO CONTINUE |");
+                    System.out.println("|     Sedan?         RATE IS All Inclusive Rs. 14/KM  PRESS ==> 'S' TO CONTINUE |");
+                    System.out.println("|     SUV?           RATE IS All Inclusive Rs. 19/KM  PRESS ==> 'C' TO CONTINUE |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|       NOTE : WE CHARGE 5 % ON THE OVERALL TRANSACTION AS FEES                 |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+                    System.out.println("|   CHOOSE THE CORRECT OPTION OR PRESS 'R' TO RETURN AND CANCEL TRANSACTION     |");
+                    System.out.println("|-------------------------------------------------------------------------------|");
+
+                    System.out.println();
+                    System.out.println("Enter choice");
+
+                    // user choice here
+                    choice=kb.next().charAt(0);
+
+                    switch(choice)
+                    {
+                        case 'H':System.out.println("Hatchback  selected.");
+                        System.out.println(" Rate is Rs. 10 per km ");
+                        System.out.println("Enter the number of Kilometers: ");
+                        km  = kb.nextInt();
+                        car = 10;
+                        total=total+(car*km); ;
+                        System.out.println("Current total Rs. " +total);
+
+                        break;
+
+                        case 'S' :System.out.println("Sedan Selected");
+                        System.out.println(" Rate is Rs. 14 per km ");
+                        System.out.println("Enter the number of Kilometers: ");
+                        km  = kb.nextInt();
+                        car = 14;
+                        total=total+(car*km);
+                        System.out.println("Current total Rs. " +total);
+
+                        break;
+
+                        case 'U' :System.out.println("SUV Selected");
+                        System.out.println(" Rate is Rs. 19 per km ");
+                        System.out.println("Enter the number of Kilometers: ");
+                        km  = kb.nextInt();
+                        car = 19;
+                        total=total+(car*km);
+                        System.out.println("Current total Rs. " +total);
+
+                        break;
+
+                        case 'R' :  System.out.println("Returning to first screen");
+                        break;
+
+                        default:System.out.println("Invalid selection or check caps lock is on");
+
+                    }
+                }while(choice!='R');
+                // break here:end of main meals switch statement;
+                break;
+
+                // exiting the from the whole program here
+                case 'E' :  System.out.println("EXITING SYSTEM");
+                break;
+
+                default:System.out.println("Invalid selection or check caps lock is on");
+
+            }
+
+        }while(choice!='E');
+        System.out.println("You Have Succesfully exited the System");
+        System.out.print("Enter Name: ");
+        name = kb.next();
+        System.out.print("Enter age: ");
+        age = kb.nextInt();
+        for(;true;)
+        {
+            System.out.print("Enter Your 10 digit Contact number: ");
+            con = kb.next();
+            if(con.length()==10)
+            { 
+                for (int qw = 0;qw<=9;qw++)
+                {
+                    if(con.charAt(qw)==0 || con.charAt(qw)==1 || con.charAt(qw)==2 || con.charAt(qw)==3 || con.charAt(qw)==4 || con.charAt(qw)==5 || con.charAt(qw)==6 || con.charAt(qw)==7 || con.charAt(qw)==8 || con.charAt(qw)==9 )
+                    {continue;}
+                    else
+                    {break;}
+                }
+                break;
+            }
+            else {System.out.println("Wrong number");}
+        }
+        System.out.println("Agent Charge is 5% of the total amount.");        
+        agent = 0.05*total;
+        fin = total + agent;
+        if(age <= 18 && age >= 12)
+        {
+            System.out.print("CONGRATULATIONS! YOU HAVE QUALIFIED FOR SPECIAL STUDENT DISCOUNT OF 25%");
+            System.out.println("DO YOU WISH TO AVAIL THE DISCOUNT? Y/N? ");
+            c1 = kb.next().charAt(0);
+            switch (c1)
+            {
+                case 'Y':
+                case 'y':
+                total = 0.75*total;
+                agent = 0.05*total;
+                fin = total +agent;
+
+                System.out.println("THANK YOU FOR THE DETAILS! GENERATING BILL ");
+
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|           YOUR ORDER IS SUCCESFULLY BOOKED                 |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|        STUDENT DISCOUNT OF 25% OFFER ENABLED               |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("| NAME        : "+name);   
+                System.out.println("| AGE         : "+age);
+                System.out.println("| YOUR CONTACT: "+con);
+
+                System.out.println("| YOUR TOTAL  :                  Rs. "+total);
+                System.out.println("| AGENT (5%)  :                  Rs. "+agent);
+                System.out.println("| FINAL AMOUNT (TOTAL + AGENT) : Rs. "+fin);
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  THANK YOU! CONTACT US: +91-8108222971                     |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  TO GET THE BILL PRESS PRTSRC. TO GET SCREENSHOT           |");
+                System.out.println("|------------------------------------------------------------|");
+                break;
+
+                case 'N':
+                case 'n':
+
+                System.out.println("THANK YOU FOR THE DETAILS! GENERATING BILL ");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|           YOUR ORDER IS SUCCESFULLY BOOKED                 |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("| NAME        : "+name);   
+                System.out.println("| AGE         : "+age);
+                System.out.println("| YOUR CONTACT: "+con);
+
+                System.out.println("| YOUR TOTAL  :                  Rs. "+total);
+                System.out.println("| AGENT (5%)  :                  Rs. "+agent);
+                System.out.println("| FINAL AMOUNT (TOTAL + AGENT) : Rs. "+fin);
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  THANK YOU! CONTACT US: +91-8108222971                     |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  TO GET THE BILL PRESS PRTSRC. TO GET SCREENSHOT           |");
+                System.out.println("|------------------------------------------------------------|");
+                break;
+            }
+        }
+        else if(age >= 55 && age <= 100)
+        {   
+            System.out.print("CONGRATULATIONS! YOU HAVE QUALIFIED FOR SPECIAL SENIOR CITIZENS DISCOUNT OF 30%");
+            System.out.println("DO YOU WISH TO AVAIL THE DISCOUNT? Y/N? ");
+            c1 = kb.next().charAt(0);
+            switch (c1)
+            {
+                case 'Y':
+                case 'y':
+                total = 0.7*total;
+                agent = 0.05*total;
+                fin = total + agent;
+
+                System.out.println("THANK YOU FOR THE DETAILS! GENERATING BILL ");
+
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|           YOUR ORDER IS SUCCESFULLY BOOKED                 |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|        SENIOR CITIZENS DISCOUNT OF 30% OFFER ENABLED       |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("| NAME        : "+name);   
+                System.out.println("| AGE         : "+age);
+                System.out.println("| YOUR CONTACT: "+con);
+
+                System.out.println("| YOUR TOTAL  :                  Rs. "+total);
+                System.out.println("| AGENT (5%)  :                  Rs. "+agent);
+                System.out.println("| FINAL AMOUNT (TOTAL + AGENT) : Rs. "+fin);
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  THANK YOU! CONTACT US: +91-8108222971                     |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  TO GET THE BILL PRESS PRTSRC. TO GET SCREENSHOT           |");
+                System.out.println("|------------------------------------------------------------|");
+                break;
+
+                case 'N':
+
+                System.out.println("THANK YOU FOR THE DETAILS! GENERATING BILL ");
+
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|           YOUR ORDER IS SUCCESFULLY BOOKED                 |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("| NAME        : "+name);   
+                System.out.println("| AGE         : "+age);
+                System.out.println("| YOUR CONTACT: "+con);
+
+                System.out.println("| YOUR TOTAL  :                  Rs. "+total);
+                System.out.println("| AGENT (5%)  :                  Rs. "+agent);
+                System.out.println("| FINAL AMOUNT (TOTAL + AGENT) : Rs. "+fin);
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  THANK YOU! CONTACT US: +91-8108222971                     |");
+                System.out.println("|------------------------------------------------------------|");
+                System.out.println("|  TO GET THE BILL PRESS PRTSRC. TO GET SCREENSHOT           |");
+                System.out.println("|------------------------------------------------------------|");
+                break;
+
+            }
+        }
+        else
+        {
+            System.out.println("THANK YOU FOR THE DETAILS! GENERATING BILL ");
+
+            System.out.println("|------------------------------------------------------------|");
+            System.out.println("|           YOUR ORDER IS SUCCESFULLY BOOKED                 |");
+            System.out.println("|------------------------------------------------------------|");
+            System.out.println("| NAME        : "+name);   
+            System.out.println("| AGE         : "+age);
+            System.out.println("| YOUR CONTACT: "+con);
+
+            System.out.println("| YOUR TOTAL  :                  Rs. "+total);
+            System.out.println("| AGENT (5%)  :                  Rs. "+agent);
+            System.out.println("| FINAL AMOUNT (TOTAL + AGENT) : Rs. "+fin);
+            System.out.println("|------------------------------------------------------------|");
+            System.out.println("|  THANK YOU! CONTACT US: +91-8108222971                     |");
+            System.out.println("|------------------------------------------------------------|");
+            System.out.println("|  TO GET THE BILL PRESS PRTSRC. TO GET SCREENSHOT           |");
+            System.out.println("|------------------------------------------------------------|");
+        }
+    }
+}
